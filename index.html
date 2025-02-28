@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevBoard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>hello</h1>
+<body class="bg-slate-300 min-h-screen p-2">
+    <header class="w-11/12 mx-auto">
+      <nav class="bg-white rounded flex justify-between items-center p-3">
+        <div class=" flex items-center gap-2">
+          <img src="assets/logo.png" alt="">
+          <h1 class="text-3xl ">Dev<span class="font-bold text-3xl text-black">Doard</span></h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="assets/checkbox.png" alt="">
+          <p class="font-bold text-xl">23</p>
+          <button><img src="assets/theme-btn.png" alt=""></button>
+        </div>
+      </nav>
+    </header>
+    <main class="w-11/12 mx-auto my-4">
+        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+            <div>
+              <div class="bg-white rounded p-4 grid grid-cols-[1fr_2fr_1fr] gap-3">
+                <div class="bg-gray-400 rounded flex items-center gap-4 p-4">
+                  <div class="w-14 h-14 bg-white rounded-full flex justify-center items-center">
+                    <img src="assets/checkbox.png" alt="">
+                  </div>
+                  <div>
+                    <p>Task Assigned</p>
+                    <p class="font-bold text-xl">6</p>
+                  </div>
+                </div>
+                <div class="bg-linear-to-r from-[#3b55fd] to-[#8e9df8] rounded">
+                 <div class="p-4 flex items-center gap-4">
+                  <img src="assets/board.png" alt="">
+                  <p class="font-bold text-white text-xl">Discover Something <br>New Today!</p>
+                 </div>
+                </div>
+                <div class="bg-gray-400 rounded flex items-center gap-4 p-4">
+                  <div class="w-14 h-14 bg-white rounded-full flex justify-center items-center">
+                    <img src="assets/calender.png" alt="">
+                  </div>
+                  <div>
+                    <p>Wed ,
+                      <br>
+                      <span class="font-bold text-xl">Jul 28 2025</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- card section -->
+              <div class="border-t-2 border-dashed border-gray-400 bg-white p-4">
+               <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+                 <div>
+
+                 </div>
+               </div>
+              </div>
+            </div>
+          <div class="bg-white rounded">
+            <h1>heeed</h1>
+          </div>
+        </div>
+    </main>
 </body>
 </html>
