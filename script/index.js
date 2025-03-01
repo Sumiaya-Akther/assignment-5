@@ -2,7 +2,7 @@
 
 document.getElementById("another_page")
 .addEventListener("click", function(){
-    window.location.href="./main.html"
+    window.location.href="main.html"
 });
 
 // random bg color
@@ -27,6 +27,7 @@ const btnCompleted = document.querySelectorAll(".btn-completed");
 let task = btnCompleted.length;
 document.getElementById("taskA").innerText = task;
 let navTask = 23;
+
 
  for (let i = 0; i < btnCompleted.length; i++) {
     const btn = btnCompleted[i];
