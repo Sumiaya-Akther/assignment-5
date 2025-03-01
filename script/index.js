@@ -22,10 +22,11 @@ document.getElementById("date").innerText = new Date().toDateString();
 
 // card section
 
-let navTask = 22;
+const activeHistory = document.getElementById("activity-history");
 const btnCompleted = document.querySelectorAll(".btn-completed");
 let task = btnCompleted.length;
 document.getElementById("taskA").innerText = task;
+let navTask = 23;
 
  for (let i = 0; i < btnCompleted.length; i++) {
     const btn = btnCompleted[i];
@@ -36,10 +37,37 @@ document.getElementById("taskA").innerText = task;
 
             document.getElementById("taskA").innerText = task;
             document.getElementById("nav-task").innerText = navTask;
+
+            this.classList.add("pointer-events-n0ne", "opacity-50", "bg-gray-400");
+            alert("Board updated Successfully");
+
+
+            const newTime = new Date().toLocaleTimeString();
+            let title = document.querySelectorAll(".title");
+
+            const logMessage = document.createElement("p");
+            logMessage.innerText = `You have Complete The Task ${title} at ${newTime}`;
+            logMessage.classList.add("bg-[#f4f7ff]", "p-3", "rounded");
+
+            activeHistory.appendChild(logMessage);
+
+            if (task === 0) {
+                setTimeout(() =>{
+                    alert("congrates!!!You completed all the current task.");
+                }, 500)
+            }
+
         }
     })
     
  }
+
+//  clear history button
+
+document.getElementById("history-btn")
+.addEventListener("click", function(){
+  activeHistory.innerHTML = "";
+});
    
 
 
