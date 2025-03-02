@@ -31,7 +31,7 @@ let navTask = 23;
 
  for (let i = 0; i < btnCompleted.length; i++) {
     const btn = btnCompleted[i];
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", function(event){
         if (task>0){
             task--;
             navTask++;
@@ -44,7 +44,8 @@ let navTask = 23;
 
 
             const newTime = new Date().toLocaleTimeString();
-            let title = document.querySelectorAll(".title");
+            let card = event.target.parentElement.parentElement;
+            let title =card?card.querySelector(".title")?.innerText : "Unknown Task";
 
             const logMessage = document.createElement("p");
             logMessage.innerText = `You have Complete The Task ${title} at ${newTime}`;
